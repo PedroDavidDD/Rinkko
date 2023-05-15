@@ -15,7 +15,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - piso
   - 
   - 
   - 
@@ -50,4 +50,13 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 2005020979
+    locked: 0
+  - name: Personajes
+    uniqueID: 3477532011
+    locked: 0
+  - name: Objetos
+    uniqueID: 2254411735
+    locked: 0
+  - name: FrontForeground
+    uniqueID: 1998683141
     locked: 0
