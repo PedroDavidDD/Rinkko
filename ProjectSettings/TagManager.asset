@@ -39,6 +39,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Bosque0
+    uniqueID: 1230645625
+    locked: 0
   - name: Background
     uniqueID: 1580855999
     locked: 0
