@@ -339,7 +339,6 @@ GameObject:
   - component: {fileID: 208265344}
   - component: {fileID: 208265343}
   - component: {fileID: 208265345}
-  - component: {fileID: 208265346}
   m_Layer: 0
   m_Name: Pj-sword
   m_TagString: Untagged
@@ -473,18 +472,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.06486821, y: 0.17936476}
   m_EdgeRadius: 0
---- !u!114 &208265346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 208265336}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 500a8bc1feb734a4f9841cd0e856b1c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &208725412
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,7 +706,6 @@ GameObject:
   - component: {fileID: 448582135}
   - component: {fileID: 448582139}
   - component: {fileID: 448582140}
-  - component: {fileID: 448582141}
   m_Layer: 0
   m_Name: Pj-singer
   m_TagString: Untagged
@@ -787,7 +773,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448582132}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: -0.429, z: 0.021215994}
+  m_LocalPosition: {x: -1, y: -0.46, z: 0.021215994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -808,7 +794,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 9051790856283de4681a323aa5da0331, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -828,30 +814,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6cfac4f6905a547b4b2ab2038a72d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 6
-  AlturaSalto: 10
-  PotenciaSalto: 20
+  moveSpeed: 1
+  jumpForce: 5
+  maxHealth: 100
+  currentHealth: 0
+  attackDamage: 10
+  attackRate: 1
+  jumpSound: {fileID: 0}
+  attackSound: {fileID: 0}
+  AlturaSalto: 3
+  Gravedad: 0
   Saltando: 0
   Fallen: 0.4
-  ani: {fileID: 0}
-  numero_Saltos: 0
+  LimiteDeVelocidadPorCaida: -10
   v3: {x: 0, y: -0.01, z: 0}
   distance: 0.13
   layer:
     serializedVersion: 2
     m_Bits: 512
---- !u!114 &448582141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448582132}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 500a8bc1feb734a4f9841cd0e856b1c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &517923367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -889,11 +869,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7887174182375975896, guid: e21691f96024f084a8e18607cf046b35, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.045871496
+      value: 0.048
       objectReference: {fileID: 0}
     - target: {fileID: 7887174182375975896, guid: e21691f96024f084a8e18607cf046b35, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.032999992
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 7887174182375975896, guid: e21691f96024f084a8e18607cf046b35, type: 3}
       propertyPath: m_LocalPosition.z
