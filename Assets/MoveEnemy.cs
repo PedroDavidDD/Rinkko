@@ -19,10 +19,9 @@ public class MoveEnemy : MonoBehaviour
     public static bool isMoving = true;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();   
-
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -32,9 +31,12 @@ public class MoveEnemy : MonoBehaviour
     }
 
     private void Move()
-    {      
+    {
         if (isMoving && Attacking.isAttacking == false)
         {
+
+            spriteRenderer.color = Color.white;
+
             // Para que el objeto se mueva a la nueva posición
             transform.position = Vector2.MoveTowards(transform.position, puntosDeMovimiento[siguientePunto].position, velocidadDeMovimiento * Time.deltaTime);
 

@@ -25,6 +25,9 @@ public class Attacking : MonoBehaviour
         // Comprueba si se puede realizar un nuevo disparo
         if (nextTime <= 0)
         {
+
+            spriteRenderer.color = Color.Lerp(Color.black, Color.white, Time.deltaTime);
+
             StartCoroutine(ShootWithRaycast());  // Realiza el disparo
             nextTime = cooldown;                  // Reinicia el tiempo de enfriamiento           
         }
