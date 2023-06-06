@@ -1167,6 +1167,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebe34193ebce1e64eaa6ce8436ce0e26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "cantidadDa\xF1o": 10
+  "efectoDelDa\xF1o": 1
+  pjController: {fileID: 448582140}
+  nextTime: 0
+  cooldown: 1
 --- !u!61 &426359022
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1369,7 +1374,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1001 &517923367
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -134,22 +134,8 @@ public class PjController : MonoBehaviour
 
     void Update()
     {
-        // Lógica de movimiento y acciones del personaje
-        // ...
         DetectorPlataforma();
         transform.Translate(Vector3.up * Gravedad * Time.deltaTime);
-        // Move();
-
-        // if (Input.GetButtonDown("Jump") && isGrounded)
-        // {
-            // Jump();
-        // }
-
-        // if (Input.GetKeyDown("Attack"))
-        // {
-        //     Attack();
-
-        // }
     }
 
     public void Move()
@@ -217,18 +203,13 @@ public class PjController : MonoBehaviour
     {
         // Lógica de muerte del personaje
         // ...
+        Debug.Log("Muerto");
     }
 
     private void Attack()
     {
         if (Time.time >= nextAttackTime)
         {
-            // Lógica de ataque
-            // ...
-            // PlayAttackSound();
-
-            // Actualizar el tiempo para el próximo ataque
-            nextAttackTime = Time.time + 1f / attackRate;
         }
     }
 
