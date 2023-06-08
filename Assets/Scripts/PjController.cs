@@ -1,243 +1,158 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PjController : MonoBehaviour
 {
-    private float MeleeAttack;
-    private float DistanceAttack;
-
     // Variables de movimiento
     public float moveSpeed = 5f;
-    public float jumpForce = 5f;
 
     // Variables de salud y daño
-    public int maxHealth = 100;
-    public int currentHealth;
-    private float defense;
+    public HealthSystem healthSystem;
 
     // Variables de combate
     public int attackDamage = 10;
     public float attackRate = 1f;
-    private float nextAttackTime = 0f;
-
-    // Variables de control
-    // private bool isGrounded = false;
 
     // Variables de animación
     private Animator animator;
 
-    // Variables de sonido
-    public AudioClip jumpSound;
-    public AudioClip attackSound;
+    [Header("Detectar el suelo")]
+    public Transform groundCheck;
+    public LayerMask groundLayer;
+    public float groundCheckRadius;
+    public bool isGrounded = false;
+
+    [Header("Salto y Doble salto")]
+    private Rigidbody2D rb;
+    public float jumpForce = 3f;
+    public bool isJumping = false;
+    public float doubleJumpForce = 3f;
+    public bool canDoubleJumping = false;
+
     private AudioSource audioSource;
 
-    ///////////////////////////////////////////////////////////////
-
-    public float AlturaSalto;
-    public float Gravedad;
-    private int Fase1;
-    private int Fase2;
-    public bool Saltando;
-    public float Fallen;
-    private float YPos;
-    private float sky_;
-    public int LimiteDeVelocidadPorCaida = -10;
-    ////////////////////////DETECTOR DE PISO//////////////////////////
-
-
     private RaycastHit2D hit;
-    public Vector3 v3;
-    public float distance;
-    public LayerMask layer;
-
-
-    ///////////////////////////////////////////////////////////////
-
+    private Vector3 v3;
+    [Header("Dash")]
+    private bool CanMove = true;
+    private bool canBeDash = true;
+    /*
+    public float speedDash = 20f;
+    public float timeDash = .4f;
+    private float gravityInicial;
+    */
 
 
     private void Awake()
     {
-        currentHealth = maxHealth;
-
         // Obtener referencias a los componentes necesarios
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        rb = GetComponent<Rigidbody2D>();
     }
-
-    private void OnDrawGizmos(){
-        Gizmos.DrawRay(transform.position + v3, Vector3.up * -1 * distance);
-    }
-    private bool CheckCollision {
-        get
-        {
-            hit = Physics2D.Raycast(transform.position + v3, Vector3.up * -1, distance, layer);
-            return hit.collider != null;
-        }
-    }
-    private void DetectorPlataforma(){
-        if(CheckCollision)
-        {
-            animator.SetBool("sky", false);
-            sky_ =0;
-            if(!Saltando){
-                Gravedad = 0;
-                Fase1 = 0;
-                Fase2 = 0;
-            }
-        }else{
-            animator.SetBool("sky", true);
-            if(!Saltando){
-                switch(Fase2){
-                    case 0: 
-                        Gravedad = 0;
-                        Fase2 = 1;
-                        break;
-                    case 1:
-                        if(Gravedad > LimiteDeVelocidadPorCaida){
-                            Gravedad -= AlturaSalto / Fallen * Time.deltaTime;
-                        }
-                        break;
-                }
-            }
-        }
-
-        if(transform.position.y > YPos){
-            animator.SetFloat("gravedad", 1);
-        }
-        if(transform.position.y < YPos){
-            animator.SetFloat("gravedad", 0);
-            switch(sky_){
-                case 0: 
-                    animator.Play("Base Layer.Sky", 0, 0);
-                    sky_++;
-                    break;
-            }
-        }
-        YPos = transform.position.y;
-    }
-
     private void Start()
     {
-        currentHealth = maxHealth;
-
-        // Obtener referencias a los componentes necesarios
-        animator = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
+        // gravityInicial = rb.gravityScale;
     }
 
-    void FixedUpdate()
+    private void OnDrawGizmos()
     {
-        Move();
-        Jump();
-    }  
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+    }
 
-    void Update()
+    private void FixedUpdate()
     {
-        DetectorPlataforma();
-        transform.Translate(Vector3.up * Gravedad * Time.deltaTime);
+        if (CanMove)
+        {
+            Move();
+        }
+    }
+
+    private void Update()
+    {
+        Jump();
+       /* if (Input.GetKeyDown(KeyCode.F) && canBeDash)
+        {
+            StartCoroutine(Dash());
+        }*/
     }
 
     public void Move()
     {
         // Lógica de movimiento común para todos los personajes
-        if(Input.GetKey(KeyCode.RightArrow)){
-            transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
+        {
 
-            transform.rotation = Quaternion.Euler(0, 0, 0);
-            animator.SetBool("run", true);
-        }else{
-            animator.SetBool("run", false);
+            int isLeft = Input.GetKey(KeyCode.LeftArrow) ? -1 : 1;
+
+            transform.Translate(Vector3.right * moveSpeed * isLeft * Time.deltaTime);
+            transform.localScale = new Vector3(isLeft, 1f, 1f);
+
+            ToggleAnimator("run", true);
+        }
+        else
+        {
+            ToggleAnimator("run", false);
         }
 
-        if(Input.GetKey(KeyCode.LeftArrow)){
-            transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
-            transform.rotation = Quaternion.Euler(0, 180, 0);
-            animator.SetBool("run", true);
-        }
+        // Detectar si está en el piso o suelo: Is Grounded?
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+    }
+
+    public void ToggleAnimator(string nameAnimator, bool state)
+    {
+        animator.SetBool(nameAnimator, state);
     }
 
     public void TakeDamage(int damageAmount)
     {
-        currentHealth -= damageAmount;
-
-        // Lógica adicional cuando el personaje recibe daño
-        // ...
-        if (currentHealth <= 0)
+        if (healthSystem != null)
         {
-            Die();
+            healthSystem.TakeDamage(damageAmount);
         }
-    }  
-
+    }
     private void Jump()
     {
-        // Lógica de saltar del personaje
-        if(Input.GetKey(KeyCode.X)){
-            switch(Fase1){
-                case 0: 
-                    if (CheckCollision){
-                        Gravedad = AlturaSalto;
-                        Fase1 = 1;
-                        Saltando = true;
-                    }
-                    break;
-                case 1:
-                    if (Gravedad > 0){
-                        Gravedad -= jumpForce * Time.deltaTime;
-                    }else{
-                        Fase1 = 2;
-                    }
-                    Saltando = true;
-                    break;
-                case 2:
-                    Saltando = false;
-                    break;
-            }
-        }else{
-            Saltando = false;
-        }
-
-    }
-
-    private void Die()
-    {
-        // Lógica de muerte del personaje
-        // ...
-        Debug.Log("Muerto");
-    }
-
-    private void Attack()
-    {
-        if (Time.time >= nextAttackTime)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
+            if (isGrounded && !isJumping)
+            {
+                isJumping = true;
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                canDoubleJumping = true;
+            }
+            else if (canDoubleJumping && !isGrounded)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, doubleJumpForce);
+                canDoubleJumping = false;
+                isJumping = false;
+            }
         }
     }
+    /*
+    private IEnumerator Dash()
+    {
+        CanMove = false;
+        canBeDash = false;
+        rb.gravityScale = 0;
+        rb.velocity = new Vector2(speedDash * transform.localScale.x, 0);
 
-    // private void PlayJumpSound()
-    // {
-    //     audioSource.PlayOneShot(jumpSound);
-    // }
+        yield return new WaitForSeconds(timeDash);
 
-    // private void PlayAttackSound()
-    // {
-    //     audioSource.PlayOneShot(attackSound);
-    // }
+        CanMove = true;
+        canBeDash = true;
+        rb.gravityScale = gravityInicial;
+    }*/
 
-    // // Detectar si el personaje está en el suelo
-    // private void OnCollisionEnter(Collision collision)
-    // {
-    //     if (collision.gameObject.CompareTag("Ground"))
-    //     {
-    //         isGrounded = true;
-    //     }
-    // }
-
-    // private void OnCollisionExit(Collision collision)
-    // {
-    //     if (collision.gameObject.CompareTag("Ground"))
-    //     {
-    //         isGrounded = false;
-    //     }
-    // }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            isJumping = false;
+            canDoubleJumping = false;
+        }
+    }
 }

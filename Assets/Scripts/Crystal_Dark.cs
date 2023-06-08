@@ -5,7 +5,7 @@ using UnityEngine;
 public class Crystal_Dark : MonoBehaviour
 {
     [SerializeField]
-    private float puntosCrystal = 3f;
+    private int puntosCrystal = 3;
 
     // Referencia al objeto ControllerScore asignada en el editor de Unity
     public ControllerScore controllerScore;

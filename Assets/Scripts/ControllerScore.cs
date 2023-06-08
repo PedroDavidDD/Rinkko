@@ -12,22 +12,28 @@ public class ControllerScore : MonoBehaviour
     [SerializeField]
     private Text crystalpoint;
 
-    private float crystalTotal = 2f;
+    private int crystalTotal = 2;
 
     [SerializeField]
     private Text corazonpoint;
-
-    private float corazonTotal = 3f;
 
     [SerializeField]
     private Text scorepoint;
     private float scoreTotal;
 
+    public HealthSystem healthSystem;
+
+    void Start()
+    {
+        healthSystem.SetMaxHealth(100);
+
+    }
+
     void Update()
     {
         moneypoint.text = moneyTotal.ToString();
         crystalpoint.text = crystalTotal.ToString();
-        corazonpoint.text = corazonTotal.ToString();
+        corazonpoint.text = healthSystem.GetCurrentHealth().ToString();
 
         scoreTotal = moneyTotal + crystalTotal;
         scorepoint.text = scoreTotal.ToString();
@@ -37,13 +43,16 @@ public class ControllerScore : MonoBehaviour
     {
         moneyTotal += puntosDelObjeto;
     }
-    public void ObtenerCrystal(float puntosDelObjeto)
+    public void ObtenerCrystal(int puntosDelObjeto)
     {
         crystalTotal += puntosDelObjeto;
     }
-    public void ObtenerCorazon(float puntosDelObjeto)
+    public void ObtenerCorazon(int puntosDelObjeto)
     {
-        corazonTotal += puntosDelObjeto;
+        if (healthSystem.GetCurrentHealth() < healthSystem.GetMaxHealth())
+        {
+            healthSystem.SetAumentarVida(puntosDelObjeto);
+        }
     }
 
 }

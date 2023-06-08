@@ -137,4 +137,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puntosMoney: 2
-  controllerScore: {fileID: 0}
+  controllerScore: {fileID: 4982261189451657830, guid: 3855aa5c06bfce648be77efb302bdd37, type: 3}

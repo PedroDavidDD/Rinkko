@@ -26,7 +26,7 @@ public class Weapon : MonoBehaviour
 	}
 
 	void ShooterWithKeyCode(){
-		if (Input.GetKeyDown(KeyCode.F)) {
+		if (Input.GetKeyDown(KeyCode.G)) {
 			Shoot();
 		}
 	}

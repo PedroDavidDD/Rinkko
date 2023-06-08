@@ -59,10 +59,6 @@ public class Attacking : MonoBehaviour
 
                 // Calcula la dirección hacia el jugador
                 Vector2 direction = (collider.transform.position - firePoint.position).normalized;
-                Debug.Log(collider.transform.position);
-                Debug.Log(firePoint.position);
-                Debug.Log(collider.transform.position - firePoint.position);
-                Debug.Log(direction);
                 // Realiza un raycast en la dirección calculada
                 RaycastHit2D hit = Physics2D.Raycast(firePoint.position, direction);
 
