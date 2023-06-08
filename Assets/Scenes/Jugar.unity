@@ -1210,10 +1210,10 @@ GameObject:
   - component: {fileID: 448582135}
   - component: {fileID: 448582139}
   - component: {fileID: 448582143}
+  - component: {fileID: 448582146}
   - component: {fileID: 448582140}
   - component: {fileID: 448582144}
   - component: {fileID: 448582145}
-  - component: {fileID: 448582146}
   m_Layer: 0
   m_Name: Pj-singer
   m_TagString: Player
@@ -1281,7 +1281,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448582132}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.9, y: -0.06, z: 0.021215994}
+  m_LocalPosition: {x: 3.36, y: 0.16, z: 0.021215994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1300,10 +1300,10 @@ Animator:
   m_GameObject: {fileID: 448582132}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9051790856283de4681a323aa5da0331, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -1384,10 +1384,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e44d857e8626bf439026e64d856c1c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedDash: 10
+  speedDash: 2
   timeDash: 0.4
---- !u!61 &448582146
-BoxCollider2D:
+--- !u!58 &448582146
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1399,19 +1399,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.016930342, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
-    newSize: {x: 1, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.000000029802322, y: -0.011161745}
   serializedVersion: 2
-  m_Size: {x: 0.27505255, y: 0.24871589}
-  m_EdgeRadius: 0
+  m_Radius: 0.11714408
 --- !u!1001 &517923367
 PrefabInstance:
   m_ObjectHideFlags: 0

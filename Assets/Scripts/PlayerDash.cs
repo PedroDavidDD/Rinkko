@@ -9,7 +9,7 @@ public class PlayerDash : MonoBehaviour
     private Rigidbody2D rb;
     private bool CanMove = true;
     private bool canBeDash = true;
-    public float speedDash = 20f;
+    public float speedDash = 2f;
     public float timeDash = .4f;
     private float gravityInicial;
 

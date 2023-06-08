@@ -6,7 +6,7 @@ using UnityEngine;
 public class PjController : MonoBehaviour
 {
     // Variables de movimiento
-    public float moveSpeed = 5f;
+    public float moveSpeed = 1f;
 
     // Variables de salud y daño
     public HealthSystem healthSystem;
@@ -21,7 +21,7 @@ public class PjController : MonoBehaviour
     [Header("Detectar el suelo")]
     public Transform groundCheck;
     public LayerMask groundLayer;
-    public float groundCheckRadius;
+    public float groundCheckRadius = 0.025f;
     public bool isGrounded = false;
 
     [Header("Salto y Doble salto")]
