@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Rinkko
+  m_Name: Fall
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,11 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: a0777ff248f68fd4c91f7c4b2c01180a, type: 3}
-    - time: 1
-      value: {fileID: 21300000, guid: 095c3ba6b65ee9a47a4340cc72c235c6, type: 3}
-    - time: 1.9833333
-      value: {fileID: 21300000, guid: a7b54a1924e77484f840d5e7bdbe197d, type: 3}
+      value: {fileID: 21300000, guid: 53b99c19a7f3ed1449d6b3924df58b2b, type: 3}
+    - time: 0.083333336
+      value: {fileID: 21300000, guid: 74f55d10d44987f4caf3642a7074d24e, type: 3}
+    - time: 0.16666667
+      value: {fileID: 21300000, guid: 7ea4573046e053c49bdc359542734504, type: 3}
+    - time: 0.25
+      value: {fileID: 21300000, guid: abce6379c95baa747999250a6a4dedd7, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,15 +46,16 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: a0777ff248f68fd4c91f7c4b2c01180a, type: 3}
-    - {fileID: 21300000, guid: 095c3ba6b65ee9a47a4340cc72c235c6, type: 3}
-    - {fileID: 21300000, guid: a7b54a1924e77484f840d5e7bdbe197d, type: 3}
+    - {fileID: 21300000, guid: 53b99c19a7f3ed1449d6b3924df58b2b, type: 3}
+    - {fileID: 21300000, guid: 74f55d10d44987f4caf3642a7074d24e, type: 3}
+    - {fileID: 21300000, guid: 7ea4573046e053c49bdc359542734504, type: 3}
+    - {fileID: 21300000, guid: abce6379c95baa747999250a6a4dedd7, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 2
+    m_StopTime: 0.26666668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
