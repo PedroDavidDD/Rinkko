@@ -12,10 +12,15 @@ public class PlayerDash : MonoBehaviour
     public float speedDash = 2f;
     public float timeDash = .4f;
     private float gravityInicial;
+    private Animator animator;
+
+    [SerializeField] [Tooltip("Audio de dash")]
+    private AudioClip dashSound;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
     private void Start()
     {
@@ -26,6 +31,8 @@ public class PlayerDash : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) && canBeDash)
         {
             StartCoroutine(Dash());
+            animator.SetTrigger("dash");
+            ControllerAudio.Instance.ExecuteSound(dashSound);
         }
     }
 

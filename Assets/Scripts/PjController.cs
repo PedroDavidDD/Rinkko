@@ -38,11 +38,20 @@ public class PjController : MonoBehaviour
     [Header("Dash")]
     private bool CanMove = true;
     private bool canBeDash = true;
-    /*
-    public float speedDash = 20f;
-    public float timeDash = .4f;
-    private float gravityInicial;
-    */
+
+    [Header("Variables de audio")]
+    [SerializeField]
+    [Tooltip("Audio del primer salto")]
+    private AudioClip jumpSound;
+    [SerializeField]
+    [Tooltip("Audio del segundo salto")]
+    private AudioClip doubleJumpSound;
+    [SerializeField]
+    [Tooltip("Audio de correr")]
+    private AudioClip runSound;
+    [SerializeField]
+    [Tooltip("Audio del ataque a cuerpo")]
+    private AudioClip attackSound;
 
 
     private void Awake()
@@ -74,10 +83,6 @@ public class PjController : MonoBehaviour
     private void Update()
     {
         Jump();
-       /* if (Input.GetKeyDown(KeyCode.F) && canBeDash)
-        {
-            StartCoroutine(Dash());
-        }*/
     }
 
     public void Move()
@@ -92,6 +97,7 @@ public class PjController : MonoBehaviour
             transform.localScale = new Vector3(isLeft, 1f, 1f);
 
             ToggleAnimator("run", true);
+            ControllerAudio.Instance.ExecuteSound(runSound);
         }
         else
         {
@@ -118,34 +124,25 @@ public class PjController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            
             if (isGrounded && !isJumping)
             {
                 isJumping = true;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 canDoubleJumping = true;
+                ControllerAudio.Instance.ExecuteSound(jumpSound);
+                ToggleAnimator("jumFall", isJumping);
             }
             else if (canDoubleJumping && !isGrounded)
             {
                 rb.velocity = new Vector2(rb.velocity.x, doubleJumpForce);
                 canDoubleJumping = false;
                 isJumping = false;
+                ToggleAnimator("jumFall", canDoubleJumping);
+                ControllerAudio.Instance.ExecuteSound(doubleJumpSound);
             }
         }
     }
-    /*
-    private IEnumerator Dash()
-    {
-        CanMove = false;
-        canBeDash = false;
-        rb.gravityScale = 0;
-        rb.velocity = new Vector2(speedDash * transform.localScale.x, 0);
-
-        yield return new WaitForSeconds(timeDash);
-
-        CanMove = true;
-        canBeDash = true;
-        rb.gravityScale = gravityInicial;
-    }*/
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -153,6 +150,7 @@ public class PjController : MonoBehaviour
         {
             isJumping = false;
             canDoubleJumping = false;
+            ToggleAnimator("jumFall", isJumping);
         }
     }
 }
