@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/The_White_Lady.mp3-b837a93799f61f7306b279b3b49bb8fb.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/The_White_Lady.mp3"
+dest_files=[ "res://.import/The_White_Lady.mp3-b837a93799f61f7306b279b3b49bb8fb.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

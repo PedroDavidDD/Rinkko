@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Queens_Gardens.mp3-791f966d787d15725d1974e061f2fbb1.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Queens_Gardens.mp3"
+dest_files=[ "res://.import/Queens_Gardens.mp3-791f966d787d15725d1974e061f2fbb1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

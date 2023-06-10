@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Greenpath.mp3-ac6abe62a2c8902115cadcbffbfeceda.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Greenpath.mp3"
+dest_files=[ "res://.import/Greenpath.mp3-ac6abe62a2c8902115cadcbffbfeceda.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
