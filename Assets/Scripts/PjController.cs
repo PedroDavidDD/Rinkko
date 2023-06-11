@@ -128,7 +128,8 @@ public class PjController : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 canDoubleJumping = true;
 
-                ToggleAnimator("jumFall", isJumping);
+                //ToggleAnimator("jumFall", isJumping);
+                animator.SetFloat("jumFall", 0f);
 
                 // Desactivar sonido de caminar para saltar
                 ControllerAudio.Instance.GetComponent<AudioSource>().clip = null;
@@ -141,7 +142,8 @@ public class PjController : MonoBehaviour
                 canDoubleJumping = false;
                 isJumping = false;
 
-                ToggleAnimator("jumFall", canDoubleJumping);
+                //ToggleAnimator("jumFall", canDoubleJumping);
+                animator.SetFloat("jumFall", 1f);
                 ControllerAudio.Instance.ExecuteSound(doubleJumpSound);
             }
         }
@@ -153,7 +155,8 @@ public class PjController : MonoBehaviour
         {
             isJumping = false;
             canDoubleJumping = false;
-            ToggleAnimator("jumFall", isJumping);
+            //ToggleAnimator("jumFall", isJumping);
+            animator.SetFloat("jumFall", 1f);
             ControllerAudio.Instance.IsStopSound(jumpSound);
             ControllerAudio.Instance.IsStopSound(doubleJumpSound);
         }

@@ -61,3 +61,6 @@ TagManager:
   - name: FrontForeground
     uniqueID: 1998683141
     locked: 0
+  - name: Canva
+    uniqueID: 4204681841
+    locked: 0

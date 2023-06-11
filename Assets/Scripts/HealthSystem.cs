@@ -43,6 +43,8 @@ public class HealthSystem : MonoBehaviour
     public void Die()
     {
         Debug.Log("Personaje ha muerto");
-        SceneManager.LoadScene("Jugar");
+        // Obtener el nobmre de la escena actual
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentSceneName);
     }
 }

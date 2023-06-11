@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Jugar.unity
+    path: Assets/Scenes/Menu.unity
+    guid: d22bb89e28718754f9a53a1db1eac6ce
+  - enabled: 1
+    path: Assets/Scenes/Nivel_1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Scene 2.unity
+    path: Assets/Scenes/Nivel_2.unity
     guid: dd7db6e64c830134f9c96b1011d00b0c
   m_configObjects: {}
