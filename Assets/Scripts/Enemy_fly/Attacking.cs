@@ -8,7 +8,7 @@ public class Attacking : MonoBehaviour
     public LineRenderer lineRenderer;   // Referencia al LineRenderer
     public Transform firePoint;         // Punto de origen de los disparos
     public float cooldown = 1f;         // Tiempo de enfriamiento entre disparos
-    public float detectionRadius = 10f;  // Radio de detección del jugador
+    public float detectionRadius = 10f; // Radio de detección del jugador
     private float nextTime;             // Tiempo para el siguiente disparo
 
     public static bool isAttacking;
@@ -26,7 +26,7 @@ public class Attacking : MonoBehaviour
         if (nextTime <= 0)
         {
 
-            spriteRenderer.color = Color.Lerp(Color.black, Color.white, Time.deltaTime);
+            spriteRenderer.color = Color.Lerp(Color.cyan, Color.white, Time.deltaTime);
 
             StartCoroutine(ShootWithRaycast());  // Realiza el disparo
             nextTime = cooldown;                  // Reinicia el tiempo de enfriamiento           
@@ -93,7 +93,7 @@ public class Attacking : MonoBehaviour
 
     private void HandleSuccessfulAttack(RaycastHit2D hit)
     {
-        Debug.Log("<color=green>Ataque exitoso</color>");
+        // Debug.Log("<color=green>Ataque exitoso</color>");
         Instantiate(explosionEffect, hit.point, Quaternion.identity);
         lineRenderer.SetPositions(new Vector3[] { firePoint.position, hit.point });
         lineRenderer.enabled = true;
@@ -102,7 +102,7 @@ public class Attacking : MonoBehaviour
 
     private void HandleMissedAttack()
     {
-        Debug.Log("<color=red>El jugador no fue alcanzado</color>");
+        // Debug.Log("<color=red>El jugador no fue alcanzado</color>");
         lineRenderer.SetPositions(new Vector3[] { firePoint.position, firePoint.position + firePoint.right * 100 });
         lineRenderer.enabled = true;
         StartCoroutine(DisableLineRenderer());
@@ -123,7 +123,7 @@ public class Attacking : MonoBehaviour
         {
             transform.localScale = new Vector3(1f, transform.localScale.y, transform.localScale.z);
         }
-        Debug.Log("giro");
+        // Debug.Log("giro");
 
     }
 }

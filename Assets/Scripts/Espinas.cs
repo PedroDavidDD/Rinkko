@@ -5,7 +5,7 @@ using UnityEngine;
 public class Espinas : MonoBehaviour
 {
     public int cantidadDaño = 10;
-    public float ForceDamage = 3f;
+    public float fuerzaEmpuje  = 2f;
     public PjController pjController;
 
     public float nextTime;
@@ -16,14 +16,10 @@ public class Espinas : MonoBehaviour
        if (collision.gameObject.CompareTag("Player") && pjController != null)
         {
             pjController.TakeDamage(cantidadDaño);
+
+            Vector2 direccionEmpuje = (collision.transform.position - transform.position).normalized;
+            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(direccionEmpuje * fuerzaEmpuje, ForceMode2D.Impulse);
             
-            int direction = (collision.transform.position.x < this.gameObject.transform.position.x) ? -1 : 1;
-           
-            collision.transform.position = new Vector3(
-                collision.transform.position.x + ForceDamage * direction,
-                collision.transform.position.y + ForceDamage,
-                collision.transform.position.z
-                );
         }
     }
 }
