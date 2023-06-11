@@ -10,6 +10,8 @@ public class HealthSystem : MonoBehaviour
     private int maxHealth = 100;
     public int currentHealth;
     public static int defense;
+    [SerializeField]
+    private GameObject fade;
 
     private void Awake()
     {
@@ -43,8 +45,7 @@ public class HealthSystem : MonoBehaviour
     public void Die()
     {
         Debug.Log("Personaje ha muerto");
-        // Obtener el nobmre de la escena actual
-        string currentSceneName = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(currentSceneName);
+
+        fade.SetActive(true); 
     }
 }
