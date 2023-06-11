@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class PjController : MonoBehaviour
 {
-    // Variables de movimiento
+    [Header("Mover")]
+    private bool isWalking = false;
     public float moveSpeed = 1f;
 
     // Variables de salud y daño
@@ -35,9 +36,6 @@ public class PjController : MonoBehaviour
 
     private RaycastHit2D hit;
     private Vector3 v3;
-    [Header("Dash")]
-    private bool CanMove = true;
-    private bool canBeDash = true;
 
     [Header("Variables de audio")]
     [SerializeField]
@@ -61,10 +59,6 @@ public class PjController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
     }
-    private void Start()
-    {
-        // gravityInicial = rb.gravityScale;
-    }
 
     private void OnDrawGizmos()
     {
@@ -74,7 +68,7 @@ public class PjController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (CanMove)
+        if (!PlayerDash.isDash)
         {
             Move();
         }
@@ -90,18 +84,21 @@ public class PjController : MonoBehaviour
         // Lógica de movimiento común para todos los personajes
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
         {
-
             int isLeft = Input.GetKey(KeyCode.LeftArrow) ? -1 : 1;
 
             transform.Translate(Vector3.right * moveSpeed * isLeft * Time.deltaTime);
             transform.localScale = new Vector3(isLeft, 1f, 1f);
 
-            ToggleAnimator("run", true);
-            ControllerAudio.Instance.ExecuteSound(runSound);
+            isWalking = true;
+            ToggleAnimator("run", isWalking);
+            ControllerAudio.Instance.IsSound(runSound);
+
         }
         else
         {
-            ToggleAnimator("run", false);
+            isWalking = false;
+            ToggleAnimator("run", isWalking);
+            ControllerAudio.Instance.IsStopSound(runSound);
         }
 
         // Detectar si está en el piso o suelo: Is Grounded?
@@ -122,7 +119,7 @@ public class PjController : MonoBehaviour
     }
     private void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !PlayerDash.isDash)
         {
             
             if (isGrounded && !isJumping)
@@ -130,14 +127,20 @@ public class PjController : MonoBehaviour
                 isJumping = true;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 canDoubleJumping = true;
-                ControllerAudio.Instance.ExecuteSound(jumpSound);
+
                 ToggleAnimator("jumFall", isJumping);
+
+                // Desactivar sonido de caminar para saltar
+                ControllerAudio.Instance.GetComponent<AudioSource>().clip = null;
+
+                ControllerAudio.Instance.ExecuteSound(jumpSound);
             }
             else if (canDoubleJumping && !isGrounded)
             {
                 rb.velocity = new Vector2(rb.velocity.x, doubleJumpForce);
                 canDoubleJumping = false;
                 isJumping = false;
+
                 ToggleAnimator("jumFall", canDoubleJumping);
                 ControllerAudio.Instance.ExecuteSound(doubleJumpSound);
             }
@@ -151,6 +154,8 @@ public class PjController : MonoBehaviour
             isJumping = false;
             canDoubleJumping = false;
             ToggleAnimator("jumFall", isJumping);
+            ControllerAudio.Instance.IsStopSound(jumpSound);
+            ControllerAudio.Instance.IsStopSound(doubleJumpSound);
         }
     }
 }

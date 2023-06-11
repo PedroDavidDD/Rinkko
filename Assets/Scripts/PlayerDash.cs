@@ -7,8 +7,7 @@ public class PlayerDash : MonoBehaviour
 {
     [Header("Dash")]
     private Rigidbody2D rb;
-    private bool CanMove = true;
-    private bool canBeDash = true;
+
     public float speedDash = 2f;
     public float timeDash = .4f;
     private float gravityInicial;
@@ -16,6 +15,13 @@ public class PlayerDash : MonoBehaviour
 
     [SerializeField] [Tooltip("Audio de dash")]
     private AudioClip dashSound;
+
+    [SerializeField]
+    private float nextDashTime;
+    [SerializeField]
+    private float cooldownDashTime = 1f;
+
+    public static bool isDash = false;
 
     private void Awake()
     {
@@ -28,25 +34,31 @@ public class PlayerDash : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && canBeDash)
+        if (nextDashTime <= 0)
         {
-            StartCoroutine(Dash());
-            animator.SetTrigger("dash");
-            ControllerAudio.Instance.ExecuteSound(dashSound);
+            if (Input.GetKeyDown(KeyCode.F) && !isDash)
+            {
+                StartCoroutine(Dash());
+                animator.SetTrigger("dash");
+                ControllerAudio.Instance.ExecuteSound(dashSound);
+                nextDashTime = cooldownDashTime ;
+            }
+        }
+        else
+        {
+            nextDashTime -= Time.deltaTime;
         }
     }
 
     private IEnumerator Dash()
     {
-        CanMove = false;
-        canBeDash = false;
+        isDash = true;
         rb.gravityScale = 0;
         rb.velocity = new Vector2(speedDash * transform.localScale.x, 0);
 
         yield return new WaitForSeconds(timeDash);
 
-        CanMove = true;
-        canBeDash = true;
+        isDash = false;
         rb.gravityScale = gravityInicial;
     }
 }

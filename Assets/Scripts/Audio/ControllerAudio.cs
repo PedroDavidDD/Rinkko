@@ -7,8 +7,6 @@ public class ControllerAudio : MonoBehaviour
     public static ControllerAudio Instance;
     private AudioSource audioSource;
 
-
-
     // Update is called once per frame
     private void Awake()
     {
@@ -21,8 +19,23 @@ public class ControllerAudio : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    public void ExecuteSound(AudioClip sound){
-        
+    public void ExecuteSound(AudioClip sound)
+    {
         audioSource.PlayOneShot(sound);
+    }
+    public void IsSound(AudioClip sound)
+    {
+        if (!audioSource.isPlaying || audioSource.clip != sound)
+        {
+            audioSource.clip = sound;
+            audioSource.Play();
+        }
+    }
+    public void IsStopSound(AudioClip sound)
+    {
+        if (!audioSource.isPlaying || audioSource.clip == sound)
+        {
+            audioSource.Stop();
+        }
     }
 }

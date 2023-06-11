@@ -1315,7 +1315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "cantidadDa\xF1o": 10
   ForceDamage: 3
-  pjController: {fileID: 0}
+  pjController: {fileID: 448582140}
   nextTime: 0
   cooldown: 1
 --- !u!61 &426359022
@@ -1536,8 +1536,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedDash: 2
-  timeDash: 0.4
+  timeDash: 0.5
   dashSound: {fileID: 8300000, guid: 46c36d0d8d73b344dba19c347dae8b73, type: 3}
+  nextDashTime: 0
+  cooldownDashTime: 1
 --- !u!58 &448582146
 CircleCollider2D:
   m_ObjectHideFlags: 0
