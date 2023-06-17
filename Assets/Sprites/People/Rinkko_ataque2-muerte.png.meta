@@ -124,15 +124,15 @@ TextureImporter:
         y: 128
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecc5d08c07c7a5d4f8b2b0d9804c77e4
-      internalID: 1998846533
+      spriteID: ef2fd8b0013f4334190043b2f3b6b845
+      internalID: -808124260
       vertices: []
       indices: 
       edges: []
@@ -145,15 +145,15 @@ TextureImporter:
         y: 128
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ede7fc8c98e8e540a135c159455da85
-      internalID: 1453644886
+      spriteID: 88f74f4abea8e1a4484f2ec191d69e3b
+      internalID: -1933254562
       vertices: []
       indices: 
       edges: []
@@ -166,15 +166,15 @@ TextureImporter:
         y: 128
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb0901af699e44d4c8aaac725fb70eb6
-      internalID: 530242812
+      spriteID: 36e260a6f633b2e45b94bbf8602988f2
+      internalID: 1709523423
       vertices: []
       indices: 
       edges: []
@@ -187,15 +187,15 @@ TextureImporter:
         y: 128
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c96c3382216c9b4882fd0b354380c9d
-      internalID: 2138374549
+      spriteID: 4958ce3f8c364684abba03081888a280
+      internalID: -350756945
       vertices: []
       indices: 
       edges: []
@@ -208,15 +208,15 @@ TextureImporter:
         y: 128
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d71c58891ec9c745a05d77b3d153662
-      internalID: -1371739142
+      spriteID: 64933ad181ec784479f9594579468f00
+      internalID: 1871463778
       vertices: []
       indices: 
       edges: []
@@ -225,19 +225,19 @@ TextureImporter:
       name: Rinkko_ataque2-muerte_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 320
+        y: 128
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6de369c0e52ef614fa1dc6a3f3ced99d
-      internalID: 1904355548
+      spriteID: 1dcf25df8352b3347947429f0e210a96
+      internalID: -627633762
       vertices: []
       indices: 
       edges: []
@@ -246,19 +246,19 @@ TextureImporter:
       name: Rinkko_ataque2-muerte_6
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 64
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0022b155f57b74b45acedaf548353d76
-      internalID: 582868730
+      spriteID: 9d2fbc2abd29e00418a83e8ef3d15b97
+      internalID: -279324636
       vertices: []
       indices: 
       edges: []
@@ -267,19 +267,19 @@ TextureImporter:
       name: Rinkko_ataque2-muerte_7
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 64
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07b0f9cf648869a49b51a829b63ce7f0
-      internalID: -1882121232
+      spriteID: 3c723819da1e7474698d540c73f3d58a
+      internalID: -1795255565
       vertices: []
       indices: 
       edges: []
@@ -288,19 +288,19 @@ TextureImporter:
       name: Rinkko_ataque2-muerte_8
       rect:
         serializedVersion: 2
-        x: 192
+        x: 128
         y: 64
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 879ba9faa554b6846bcf29c8104f452a
-      internalID: 861459965
+      spriteID: 17edfbc88b604104bb85642657baba2c
+      internalID: -773818425
       vertices: []
       indices: 
       edges: []
@@ -309,19 +309,19 @@ TextureImporter:
       name: Rinkko_ataque2-muerte_9
       rect:
         serializedVersion: 2
-        x: 256
+        x: 192
         y: 64
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89c3b658b9b9fc54886749199e82b454
-      internalID: 1434983914
+      spriteID: ab14ae6a3b9142947bf88d3270f2a762
+      internalID: 1550429365
       vertices: []
       indices: 
       edges: []
@@ -330,19 +330,19 @@ TextureImporter:
       name: Rinkko_ataque2-muerte_10
       rect:
         serializedVersion: 2
-        x: 320
+        x: 256
         y: 64
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 145657fd98da30642a373d9a2e51623c
-      internalID: -996741060
+      spriteID: 183abaee4a0018949bcbdbd153f54359
+      internalID: -138664823
       vertices: []
       indices: 
       edges: []
@@ -351,19 +351,19 @@ TextureImporter:
       name: Rinkko_ataque2-muerte_11
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 320
+        y: 64
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c353c2dff6da1cd40bfd6ab0b6eea7f6
-      internalID: -770709984
+      spriteID: da8f04254769fea4aa21abc25c94d0aa
+      internalID: 2034518226
       vertices: []
       indices: 
       edges: []
@@ -372,19 +372,19 @@ TextureImporter:
       name: Rinkko_ataque2-muerte_12
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1acbd1eaad7a8c4291b6ed5b9b6cb32
-      internalID: 1660047949
+      spriteID: 0ddfb92e1bf47004092e9eb25e183932
+      internalID: -609732612
       vertices: []
       indices: 
       edges: []
@@ -393,19 +393,19 @@ TextureImporter:
       name: Rinkko_ataque2-muerte_13
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 939fabb5976f92a4cbd2591d40959ffa
-      internalID: -548064108
+      spriteID: 1c18ef04ce08f0c4ba4dd840e0974cd1
+      internalID: 1621177152
       vertices: []
       indices: 
       edges: []
@@ -414,19 +414,19 @@ TextureImporter:
       name: Rinkko_ataque2-muerte_14
       rect:
         serializedVersion: 2
-        x: 206
-        y: 13
-        width: 30
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc6c25ecd1e830b408a69a436be89867
-      internalID: 1183289311
+      spriteID: 3492277929890a9428873eb6f53b2e12
+      internalID: -332904824
       vertices: []
       indices: 
       edges: []
@@ -435,19 +435,19 @@ TextureImporter:
       name: Rinkko_ataque2-muerte_15
       rect:
         serializedVersion: 2
-        x: 307
-        y: 15
-        width: 13
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6913edb027c06a642baf075620bbbd62
-      internalID: 862383092
+      spriteID: dbe1f5f4c27314345a592cbdb80b0ef3
+      internalID: -1349934065
       vertices: []
       indices: 
       edges: []
@@ -456,19 +456,19 @@ TextureImporter:
       name: Rinkko_ataque2-muerte_16
       rect:
         serializedVersion: 2
-        x: 281
-        y: 14
-        width: 15
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aaf0ddd6f86237f4287dccdb8d8d34fd
-      internalID: -1666692457
+      spriteID: 3bcd23cd40ff68d499038f228f3a753e
+      internalID: -700502930
       vertices: []
       indices: 
       edges: []
@@ -477,19 +477,19 @@ TextureImporter:
       name: Rinkko_ataque2-muerte_17
       rect:
         serializedVersion: 2
-        x: 247
-        y: 13
-        width: 25
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc7724879970b6442884cc10a057ac49
-      internalID: -951028442
+      spriteID: 6fed440fd3f8cfc449e802048557a139
+      internalID: 1894772239
       vertices: []
       indices: 
       edges: []
@@ -505,24 +505,24 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Rinkko_ataque2-muerte_0: 1998846533
-      Rinkko_ataque2-muerte_1: 1453644886
-      Rinkko_ataque2-muerte_10: -996741060
-      Rinkko_ataque2-muerte_11: -770709984
-      Rinkko_ataque2-muerte_12: 1660047949
-      Rinkko_ataque2-muerte_13: -548064108
-      Rinkko_ataque2-muerte_14: 1183289311
-      Rinkko_ataque2-muerte_15: 862383092
-      Rinkko_ataque2-muerte_16: -1666692457
-      Rinkko_ataque2-muerte_17: -951028442
-      Rinkko_ataque2-muerte_2: 530242812
-      Rinkko_ataque2-muerte_3: 2138374549
-      Rinkko_ataque2-muerte_4: -1371739142
-      Rinkko_ataque2-muerte_5: 1904355548
-      Rinkko_ataque2-muerte_6: 582868730
-      Rinkko_ataque2-muerte_7: -1882121232
-      Rinkko_ataque2-muerte_8: 861459965
-      Rinkko_ataque2-muerte_9: 1434983914
+      Rinkko_ataque2-muerte_0: -808124260
+      Rinkko_ataque2-muerte_1: -1933254562
+      Rinkko_ataque2-muerte_10: -138664823
+      Rinkko_ataque2-muerte_11: 2034518226
+      Rinkko_ataque2-muerte_12: -609732612
+      Rinkko_ataque2-muerte_13: 1621177152
+      Rinkko_ataque2-muerte_14: -332904824
+      Rinkko_ataque2-muerte_15: -1349934065
+      Rinkko_ataque2-muerte_16: -700502930
+      Rinkko_ataque2-muerte_17: 1894772239
+      Rinkko_ataque2-muerte_2: 1709523423
+      Rinkko_ataque2-muerte_3: -350756945
+      Rinkko_ataque2-muerte_4: 1871463778
+      Rinkko_ataque2-muerte_5: -627633762
+      Rinkko_ataque2-muerte_6: -279324636
+      Rinkko_ataque2-muerte_7: -1795255565
+      Rinkko_ataque2-muerte_8: -773818425
+      Rinkko_ataque2-muerte_9: 1550429365
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
