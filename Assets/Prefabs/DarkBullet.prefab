@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4167278528387200299}
   - component: {fileID: 4121027244661406470}
   - component: {fileID: 151814019563548806}
+  - component: {fileID: 2371775101103629092}
   m_Layer: 0
   m_Name: DarkBullet
   m_TagString: Untagged
@@ -119,3 +120,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bc0e956a2422b844ad116dd82631a3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &2371775101103629092
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3875019346630811257}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.49

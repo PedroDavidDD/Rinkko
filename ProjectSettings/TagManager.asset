@@ -6,6 +6,8 @@ TagManager:
   tags:
   - pjNinja
   - Enemy
+  - Bullet
+  - Shield
   layers:
   - Default
   - TransparentFX

@@ -8,9 +8,6 @@ public class Espinas : MonoBehaviour
     public float fuerzaEmpuje  = 2f;
     public PjController pjController;
 
-    public float nextTime;
-    public float cooldown = 1f;
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
        if (collision.gameObject.CompareTag("Player") && pjController != null)
