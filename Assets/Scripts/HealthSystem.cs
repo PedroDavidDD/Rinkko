@@ -19,9 +19,6 @@ public class HealthSystem : MonoBehaviour, ILifeSystem
     {
         currentHealth = maxHealth;
     }
-    private void Update()
-    {
-    }
     public void SetMaxHealth(int maxHealth)
     {
         this.maxHealth = maxHealth;
@@ -49,7 +46,6 @@ public class HealthSystem : MonoBehaviour, ILifeSystem
     }
     public void Die()
     {
-        Debug.Log("Personaje ha muerto");
         if (this.gameObject.CompareTag("Player") && fade != null)
         {
             fade.SetActive(true);

@@ -28,9 +28,9 @@ public class Fade : MonoBehaviour
     {
         // aparecer PJ
         animator.Play("FadeIn");
-        Invoke("ResetGame", 1.5f);
+        Invoke("ResetGame", 1f);
     }
-    void ResetGame()
+    public void ResetGame()
     {
         // Obtener el nobmre de la escena actual
         string currentSceneName = SceneManager.GetActiveScene().name;
