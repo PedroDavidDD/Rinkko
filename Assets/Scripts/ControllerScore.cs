@@ -26,7 +26,6 @@ public class ControllerScore : MonoBehaviour
     void Start()
     {
         healthSystem.SetMaxHealth(100);
-
     }
 
     void Update()

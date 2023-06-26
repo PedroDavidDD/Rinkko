@@ -22,10 +22,10 @@ public class DarkBullet : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            HealthSystem healthSystem = other.gameObject.GetComponent<HealthSystem>();
-            if (healthSystem != null)
+            ILifeSystem iLifeSystem = other.gameObject.GetComponent<ILifeSystem>();
+            if (iLifeSystem != null)
             {
-                healthSystem.TakeDamage(damageAmount);
+                iLifeSystem.TakeDamage(damageAmount);
             }
         }
     }

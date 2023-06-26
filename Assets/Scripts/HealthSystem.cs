@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HealthSystem : MonoBehaviour, ILifeSystem
 {
@@ -17,6 +18,9 @@ public class HealthSystem : MonoBehaviour, ILifeSystem
     private void Awake()
     {
         currentHealth = maxHealth;
+    }
+    private void Update()
+    {
     }
     public void SetMaxHealth(int maxHealth)
     {
@@ -49,10 +53,6 @@ public class HealthSystem : MonoBehaviour, ILifeSystem
         if (this.gameObject.CompareTag("Player") && fade != null)
         {
             fade.SetActive(true);
-        }
-        else
-        {
-            Destroy(this.gameObject);
         }
     }
 }

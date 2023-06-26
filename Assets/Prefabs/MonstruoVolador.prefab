@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5862152600175801651}
   - component: {fileID: 6499466559455264104}
+  - component: {fileID: 2104172391184535625}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -37,7 +38,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 20}
+  m_SizeDelta: {x: 82.46, y: 8.8306}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6499466559455264104
 MonoBehaviour:
@@ -86,10 +87,23 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.126
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2104172391184535625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4273692168300733765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff29e1eb1bc2e2742bd0fadf29cf4db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sliderHealth: {fileID: 6499466559455264104}
 --- !u!1 &5804274374576134742
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,8 +139,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 5.102207, y: 0}
-  m_SizeDelta: {x: 20.2045, y: 0.6803}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.23, y: 0.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6090596940378969225
 CanvasRenderer:
@@ -149,15 +163,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6603774, g: 0.032310616, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: d63f1f38296537f438407f7daef23213, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -200,8 +214,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7088580163571935736
 GameObject:
@@ -229,7 +243,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7088580163571935736}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
@@ -240,8 +254,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.401}
-  m_SizeDelta: {x: 15.8485, y: 15.8485}
+  m_AnchoredPosition: {x: 0, y: 0.369}
+  m_SizeDelta: {x: 10.2188, y: 8.9212}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &447996262823852333
 Canvas:
@@ -350,7 +364,7 @@ GameObject:
   - component: {fileID: 8052906685171913835}
   - component: {fileID: 8052906685171913828}
   - component: {fileID: 8052906685171913839}
-  - component: {fileID: 455635506177694644}
+  - component: {fileID: 5987097796799357731}
   m_Layer: 0
   m_Name: MonstruoVolador
   m_TagString: Enemy
@@ -600,7 +614,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   siguientePunto: 0
---- !u!114 &455635506177694644
+--- !u!114 &5987097796799357731
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -609,12 +623,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8052906685171913829}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02696bdef68d96049a3296764259854f, type: 3}
+  m_Script: {fileID: 11500000, guid: e7ad90872d3508f44a62a1f05c3c821c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 120
+  maxHealth: 100
   currentHealth: 0
-  fade: {fileID: 0}
 --- !u!1 &8423447351177826046
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,15 +687,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2264151, g: 0.2264151, b: 0.2264151, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: a8ecbf7b730050b45b0045f3f9fd5c56, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
