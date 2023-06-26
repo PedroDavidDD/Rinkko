@@ -22,8 +22,11 @@ public class DarkBullet : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            PjController pjController = other.gameObject.GetComponent<PjController>();
-            pjController.TakeDamage(damageAmount);
+            HealthSystem healthSystem = other.gameObject.GetComponent<HealthSystem>();
+            if (healthSystem != null)
+            {
+                healthSystem.TakeDamage(damageAmount);
+            }
         }
     }
 }

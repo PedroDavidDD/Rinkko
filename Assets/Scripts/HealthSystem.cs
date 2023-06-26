@@ -11,6 +11,7 @@ public class HealthSystem : MonoBehaviour, ILifeSystem
     public int currentHealth;
     public static int defense;
     [SerializeField]
+    [Header("Solo para el Player")]
     private GameObject fade;
 
     private void Awake()
@@ -45,7 +46,13 @@ public class HealthSystem : MonoBehaviour, ILifeSystem
     public void Die()
     {
         Debug.Log("Personaje ha muerto");
-
-        fade.SetActive(true); 
+        if (this.gameObject.CompareTag("Player") && fade != null)
+        {
+            fade.SetActive(true);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

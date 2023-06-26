@@ -25,11 +25,10 @@ public class Shield : MonoBehaviour
             {
                 //rb.AddForce(direccionEmpuje * fuerzaEmpuje, ForceMode2D.Impulse);
                 Debug.Log("Bajo vida al enemigo con escudo");
-                //, ILifeSystem
-                PjController pjController = other.gameObject.GetComponent<PjController>();
-                if (pjController != null)
+                HealthSystem healthSystem = other.gameObject.GetComponent<HealthSystem>();
+                if (healthSystem != null)
                 {
-                    pjController.TakeDamage(damageAmount);
+                    healthSystem.TakeDamage(damageAmount);
                 }
 
             }

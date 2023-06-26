@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Espinas : MonoBehaviour
 {
-    public int cantidadDaño = 10;
+    public int cantidadDaño = 1000;
     public float fuerzaEmpuje  = 2f;
     public PjController pjController;
 
