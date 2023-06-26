@@ -2002,7 +2002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02696bdef68d96049a3296764259854f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 100
   currentHealth: 0
   fade: {fileID: 368218570}
 --- !u!114 &448582145
@@ -4191,7 +4191,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -324.6001, y: 144.90002}
+  m_AnchoredPosition: {x: -324.60013, y: 144.90002}
   m_SizeDelta: {x: -663.3, y: -304.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1360769687
@@ -4256,7 +4256,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372808522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.61, y: 0.69, z: 0}
+  m_LocalPosition: {x: -7.63, y: 1.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4565,11 +4565,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4632829906795637162, guid: 4dd024d14dac67b4093bf68a6b85290e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.66
+      value: 1.82
       objectReference: {fileID: 0}
     - target: {fileID: 4632829906795637162, guid: 4dd024d14dac67b4093bf68a6b85290e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.39
+      value: 3.12
       objectReference: {fileID: 0}
     - target: {fileID: 4632829906795637162, guid: 4dd024d14dac67b4093bf68a6b85290e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5440,7 +5440,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1771677869}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.67, y: 2.34, z: 0}
+  m_LocalPosition: {x: -8.61, y: 2.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7694,6 +7694,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1552668936}
     m_Modifications:
     - target: {fileID: 8052906685171913828, guid: bb05ba884748c154ca7d3e3d1ea18f92, type: 3}
+      propertyPath: damageAmount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052906685171913828, guid: bb05ba884748c154ca7d3e3d1ea18f92, type: 3}
       propertyPath: lineRenderer
       value: 
       objectReference: {fileID: 776634578}
@@ -7711,11 +7715,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8052906685171913832, guid: bb05ba884748c154ca7d3e3d1ea18f92, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.88412845
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 8052906685171913832, guid: bb05ba884748c154ca7d3e3d1ea18f92, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1780217
+      value: 2.18
       objectReference: {fileID: 0}
     - target: {fileID: 8052906685171913832, guid: bb05ba884748c154ca7d3e3d1ea18f92, type: 3}
       propertyPath: m_LocalPosition.z

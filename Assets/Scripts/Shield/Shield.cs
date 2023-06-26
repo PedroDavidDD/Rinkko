@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Shield : MonoBehaviour
 {
-    public string[] repelTags; // Etiquetas de los objetos a repeler
+    public string[] repelTags; // Etiquetas de los objetos a repeler/destruir
     public float fuerzaEmpuje = 2f;
+
+    [Header("Variables de ataque")]
+    [Tooltip("cantidad de daño")]
+    public int damageAmount = 20;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -21,6 +25,13 @@ public class Shield : MonoBehaviour
             {
                 //rb.AddForce(direccionEmpuje * fuerzaEmpuje, ForceMode2D.Impulse);
                 Debug.Log("Bajo vida al enemigo con escudo");
+                //, ILifeSystem
+                PjController pjController = other.gameObject.GetComponent<PjController>();
+                if (pjController != null)
+                {
+                    pjController.TakeDamage(damageAmount);
+                }
+
             }
         }
         else if (other.gameObject.CompareTag("Bullet"))
@@ -44,4 +55,5 @@ public class Shield : MonoBehaviour
         }
         return false;
     }
+
 }

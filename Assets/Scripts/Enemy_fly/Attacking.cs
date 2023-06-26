@@ -15,7 +15,7 @@ public class Attacking : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     public Sprite[] spriteAttacking;
-
+        
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -126,4 +126,5 @@ public class Attacking : MonoBehaviour
         // Debug.Log("giro");
 
     }
+
 }

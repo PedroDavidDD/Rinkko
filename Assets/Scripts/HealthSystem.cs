@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class HealthSystem : MonoBehaviour
+public class HealthSystem : MonoBehaviour, ILifeSystem
 {
     // Variables de salud y daño
     [SerializeField]
