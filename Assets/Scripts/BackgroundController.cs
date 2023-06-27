@@ -9,16 +9,20 @@ public class BackgroundController : MonoBehaviour
 
     private Vector2 offset;
     private Material material;
-    // Start is called before the first frame update
+
+    private Rigidbody2D playerRB;
+
     private void Awake()
     {
         material = GetComponent<SpriteRenderer>().material;
+        playerRB = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();  
+
     }
 
     // Update is called once per frame
     private void Update()
     {
-        offset = velocidadMovimiento * Time.deltaTime;
+        offset =  (playerRB.velocity.x * .1f) * velocidadMovimiento * Time.deltaTime;
         material.mainTextureOffset += offset;
     }
 }
