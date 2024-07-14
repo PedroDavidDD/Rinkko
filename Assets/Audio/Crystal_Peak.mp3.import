@@ -2,14 +2,18 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/Crystal_Peak.mp3-1389873dfe8934677f32c49c32c52c77.mp3str"
+uid="uid://b8hkvqj75u815"
+path="res://.godot/imported/Crystal_Peak.mp3-790c9be1afff672f9e3c5e9c267f3bbb.mp3str"
 
 [deps]
 
-source_file="res://Assets/Audio/Crystal_Peak.mp3"
-dest_files=[ "res://.import/Crystal_Peak.mp3-1389873dfe8934677f32c49c32c52c77.mp3str" ]
+source_file="res://Rinkko/Assets/Audio/Crystal_Peak.mp3"
+dest_files=["res://.godot/imported/Crystal_Peak.mp3-790c9be1afff672f9e3c5e9c267f3bbb.mp3str"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

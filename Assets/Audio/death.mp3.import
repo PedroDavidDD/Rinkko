@@ -2,14 +2,18 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/death.mp3-162bc2f2434ba4c325c61965eae0c43f.mp3str"
+uid="uid://00bth6nrj83v"
+path="res://.godot/imported/death.mp3-129fe520aad3b4685492e0b7be441c4c.mp3str"
 
 [deps]
 
-source_file="res://Assets/Audio/death.mp3"
-dest_files=[ "res://.import/death.mp3-162bc2f2434ba4c325c61965eae0c43f.mp3str" ]
+source_file="res://Rinkko/Assets/Audio/death.mp3"
+dest_files=["res://.godot/imported/death.mp3-129fe520aad3b4685492e0b7be441c4c.mp3str"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

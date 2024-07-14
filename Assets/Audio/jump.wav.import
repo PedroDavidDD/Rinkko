@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/jump.wav-92badb36b0fcdd15e47de5d7cf0df7e9.sample"
+type="AudioStreamWAV"
+uid="uid://dg2rh27tpxq4k"
+path="res://.godot/imported/jump.wav-dd88a3d1a53d71007e3823994f112ced.sample"
 
 [deps]
 
-source_file="res://Assets/Audio/jump.wav"
-dest_files=[ "res://.import/jump.wav-92badb36b0fcdd15e47de5d7cf0df7e9.sample" ]
+source_file="res://Rinkko/Assets/Audio/jump.wav"
+dest_files=["res://.godot/imported/jump.wav-dd88a3d1a53d71007e3823994f112ced.sample"]
 
 [params]
 

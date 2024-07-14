@@ -1,35 +1,34 @@
 [remap]
 
 importer="texture"
-type="StreamTexture"
-path="res://.import/objects_fountain_animated_3.png-823f7d39362ec1d7b8fedd5f14c35bf8.stex"
+type="CompressedTexture2D"
+uid="uid://b6bvq5spjua4r"
+path="res://.godot/imported/objects_fountain_animated_3.png-339e3970cb65911f1faee94224e3b20c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cave Platformer Tileset/Enviroment sprite sheets/Cave Platformer Tileset/Individual PNG files/Tileset/objects_fountain_animated/objects_fountain_animated_3.png"
-dest_files=[ "res://.import/objects_fountain_animated_3.png-823f7d39362ec1d7b8fedd5f14c35bf8.stex" ]
+source_file="res://Rinkko/Assets/Sprites/Cave Platformer Tileset/Enviroment sprite sheets/Cave Platformer Tileset/Individual PNG files/Tileset/objects_fountain_animated/objects_fountain_animated_3.png"
+dest_files=["res://.godot/imported/objects_fountain_animated_3.png-339e3970cb65911f1faee94224e3b20c.ctex"]
 
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
-compress/hdr_mode=0
-compress/bptc_ldr=0
+compress/hdr_compression=1
 compress/normal_map=0
-flags/repeat=0
-flags/filter=false
-flags/mipmaps=false
-flags/anisotropic=false
-flags/srgb=2
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
-process/HDR_as_SRGB=false
-process/invert_color=false
 process/normal_map_invert_y=false
-stream=false
-size_limit=0
-detect_3d=true
-svg/scale=1.0
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

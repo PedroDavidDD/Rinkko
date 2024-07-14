@@ -1,35 +1,34 @@
 [remap]
 
 importer="texture"
-type="StreamTexture"
-path="res://.import/run9.png-a66353eddcf35504d7900632919457cd.stex"
+type="CompressedTexture2D"
+uid="uid://lrcmwd6h8csg"
+path="res://.godot/imported/run9.png-11d90f6244e830e908d2493a5b92badb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player/Light/run/run9.png"
-dest_files=[ "res://.import/run9.png-a66353eddcf35504d7900632919457cd.stex" ]
+source_file="res://Rinkko/Assets/Sprites/People/Player/Orange/run/run9.png"
+dest_files=["res://.godot/imported/run9.png-11d90f6244e830e908d2493a5b92badb.ctex"]
 
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
-compress/hdr_mode=0
-compress/bptc_ldr=0
+compress/hdr_compression=1
 compress/normal_map=0
-flags/repeat=0
-flags/filter=false
-flags/mipmaps=false
-flags/anisotropic=false
-flags/srgb=2
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
-process/HDR_as_SRGB=false
-process/invert_color=false
 process/normal_map_invert_y=false
-stream=false
-size_limit=0
-detect_3d=true
-svg/scale=1.0
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

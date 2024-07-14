@@ -1,35 +1,34 @@
 [remap]
 
 importer="texture"
-type="StreamTexture"
-path="res://.import/transform24.png-0daaf5093738933df6b9b9159514264f.stex"
+type="CompressedTexture2D"
+uid="uid://bxtnjqy77k0hq"
+path="res://.godot/imported/transform24.png-1c28e35f1862ddf0e919901539083288.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player/Light/transform/transform24.png"
-dest_files=[ "res://.import/transform24.png-0daaf5093738933df6b9b9159514264f.stex" ]
+source_file="res://Rinkko/Assets/Sprites/People/Player/Orange/transform/transform24.png"
+dest_files=["res://.godot/imported/transform24.png-1c28e35f1862ddf0e919901539083288.ctex"]
 
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
-compress/hdr_mode=0
-compress/bptc_ldr=0
+compress/hdr_compression=1
 compress/normal_map=0
-flags/repeat=0
-flags/filter=true
-flags/mipmaps=false
-flags/anisotropic=false
-flags/srgb=2
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
-process/HDR_as_SRGB=false
-process/invert_color=false
 process/normal_map_invert_y=false
-stream=false
-size_limit=0
-detect_3d=true
-svg/scale=1.0
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

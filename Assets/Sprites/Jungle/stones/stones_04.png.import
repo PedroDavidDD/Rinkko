@@ -1,35 +1,34 @@
 [remap]
 
 importer="texture"
-type="StreamTexture"
-path="res://.import/stones_04.png-e1d7a53fed4957cf34556ac869d902a3.stex"
+type="CompressedTexture2D"
+uid="uid://w3u7e8anmklb"
+path="res://.godot/imported/stones_04.png-7128829f02933f08ca88ace82d179917.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Jungle/stones/stones_04.png"
-dest_files=[ "res://.import/stones_04.png-e1d7a53fed4957cf34556ac869d902a3.stex" ]
+source_file="res://Rinkko/Assets/Sprites/Jungle/stones/stones_04.png"
+dest_files=["res://.godot/imported/stones_04.png-7128829f02933f08ca88ace82d179917.ctex"]
 
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
-compress/hdr_mode=0
-compress/bptc_ldr=0
+compress/hdr_compression=1
 compress/normal_map=0
-flags/repeat=0
-flags/filter=false
-flags/mipmaps=false
-flags/anisotropic=false
-flags/srgb=2
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
-process/HDR_as_SRGB=false
-process/invert_color=false
 process/normal_map_invert_y=false
-stream=false
-size_limit=0
-detect_3d=true
-svg/scale=1.0
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

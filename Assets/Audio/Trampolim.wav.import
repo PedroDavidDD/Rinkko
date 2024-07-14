@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/Trampolim.wav-83a8de402fe68d0a21b1a3895cea6789.sample"
+type="AudioStreamWAV"
+uid="uid://otoldhu8u00h"
+path="res://.godot/imported/Trampolim.wav-e3341156781a6e15d7e8b5982e5ec276.sample"
 
 [deps]
 
-source_file="res://Assets/Audio/Trampolim.wav"
-dest_files=[ "res://.import/Trampolim.wav-83a8de402fe68d0a21b1a3895cea6789.sample" ]
+source_file="res://Rinkko/Assets/Audio/Trampolim.wav"
+dest_files=["res://.godot/imported/Trampolim.wav-e3341156781a6e15d7e8b5982e5ec276.sample"]
 
 [params]
 

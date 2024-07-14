@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/Coin.wav-7786d51cf4b7366f112dc15dc98bc3f9.sample"
+type="AudioStreamWAV"
+uid="uid://cq5x4mxk34l2j"
+path="res://.godot/imported/Coin.wav-7083a7dbd8476b49df42d6f6e8403f19.sample"
 
 [deps]
 
-source_file="res://Assets/Audio/Coin.wav"
-dest_files=[ "res://.import/Coin.wav-7786d51cf4b7366f112dc15dc98bc3f9.sample" ]
+source_file="res://Rinkko/Assets/Audio/Coin.wav"
+dest_files=["res://.godot/imported/Coin.wav-7083a7dbd8476b49df42d6f6e8403f19.sample"]
 
 [params]
 

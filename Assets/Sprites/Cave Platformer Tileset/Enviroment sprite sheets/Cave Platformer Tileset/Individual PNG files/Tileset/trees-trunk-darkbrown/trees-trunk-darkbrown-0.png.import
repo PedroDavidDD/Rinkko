@@ -1,35 +1,34 @@
 [remap]
 
 importer="texture"
-type="StreamTexture"
-path="res://.import/trees-trunk-darkbrown-0.png-99f59cd07e3edb82b58a334df2e4b905.stex"
+type="CompressedTexture2D"
+uid="uid://bpsvy525pfnuo"
+path="res://.godot/imported/trees-trunk-darkbrown-0.png-136dda9853279b73e3471c9c6e8070af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cave Platformer Tileset/Enviroment sprite sheets/Cave Platformer Tileset/Individual PNG files/Tileset/trees-trunk-darkbrown/trees-trunk-darkbrown-0.png"
-dest_files=[ "res://.import/trees-trunk-darkbrown-0.png-99f59cd07e3edb82b58a334df2e4b905.stex" ]
+source_file="res://Rinkko/Assets/Sprites/Cave Platformer Tileset/Enviroment sprite sheets/Cave Platformer Tileset/Individual PNG files/Tileset/trees-trunk-darkbrown/trees-trunk-darkbrown-0.png"
+dest_files=["res://.godot/imported/trees-trunk-darkbrown-0.png-136dda9853279b73e3471c9c6e8070af.ctex"]
 
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
-compress/hdr_mode=0
-compress/bptc_ldr=0
+compress/hdr_compression=1
 compress/normal_map=0
-flags/repeat=0
-flags/filter=false
-flags/mipmaps=false
-flags/anisotropic=false
-flags/srgb=2
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
-process/HDR_as_SRGB=false
-process/invert_color=false
 process/normal_map_invert_y=false
-stream=false
-size_limit=0
-detect_3d=true
-svg/scale=1.0
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

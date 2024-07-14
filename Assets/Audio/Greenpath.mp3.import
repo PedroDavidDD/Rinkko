@@ -2,14 +2,18 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/Greenpath.mp3-ac6abe62a2c8902115cadcbffbfeceda.mp3str"
+uid="uid://c1rwwcng5k2un"
+path="res://.godot/imported/Greenpath.mp3-d0e1b868534ecf5bda849d59c6285ba2.mp3str"
 
 [deps]
 
-source_file="res://Assets/Audio/Greenpath.mp3"
-dest_files=[ "res://.import/Greenpath.mp3-ac6abe62a2c8902115cadcbffbfeceda.mp3str" ]
+source_file="res://Rinkko/Assets/Audio/Greenpath.mp3"
+dest_files=["res://.godot/imported/Greenpath.mp3-d0e1b868534ecf5bda849d59c6285ba2.mp3str"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

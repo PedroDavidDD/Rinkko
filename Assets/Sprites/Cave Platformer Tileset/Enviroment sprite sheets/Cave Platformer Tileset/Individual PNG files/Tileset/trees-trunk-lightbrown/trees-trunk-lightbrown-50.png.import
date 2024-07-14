@@ -1,35 +1,34 @@
 [remap]
 
 importer="texture"
-type="StreamTexture"
-path="res://.import/trees-trunk-lightbrown-50.png-f556fa5800e246a90de9e5d8f0359a21.stex"
+type="CompressedTexture2D"
+uid="uid://bh13rm5ux8wgr"
+path="res://.godot/imported/trees-trunk-lightbrown-50.png-46885e5f3d90339eb428c92f65fb9622.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cave Platformer Tileset/Enviroment sprite sheets/Cave Platformer Tileset/Individual PNG files/Tileset/trees-trunk-lightbrown/trees-trunk-lightbrown-50.png"
-dest_files=[ "res://.import/trees-trunk-lightbrown-50.png-f556fa5800e246a90de9e5d8f0359a21.stex" ]
+source_file="res://Rinkko/Assets/Sprites/Cave Platformer Tileset/Enviroment sprite sheets/Cave Platformer Tileset/Individual PNG files/Tileset/trees-trunk-lightbrown/trees-trunk-lightbrown-50.png"
+dest_files=["res://.godot/imported/trees-trunk-lightbrown-50.png-46885e5f3d90339eb428c92f65fb9622.ctex"]
 
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
-compress/hdr_mode=0
-compress/bptc_ldr=0
+compress/hdr_compression=1
 compress/normal_map=0
-flags/repeat=0
-flags/filter=false
-flags/mipmaps=false
-flags/anisotropic=false
-flags/srgb=2
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
-process/HDR_as_SRGB=false
-process/invert_color=false
 process/normal_map_invert_y=false
-stream=false
-size_limit=0
-detect_3d=true
-svg/scale=1.0
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

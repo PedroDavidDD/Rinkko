@@ -1,35 +1,34 @@
 [remap]
 
 importer="texture"
-type="StreamTexture"
-path="res://.import/dash3.png-065d55a3d8b2ab77357994658b4e5254.stex"
+type="CompressedTexture2D"
+uid="uid://by86qy3xpuftb"
+path="res://.godot/imported/dash3.png-f0bdb1cd3535d81b326da796887fed88.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player/Light/dash/dash3.png"
-dest_files=[ "res://.import/dash3.png-065d55a3d8b2ab77357994658b4e5254.stex" ]
+source_file="res://Rinkko/Assets/Sprites/People/Player/Orange/dash/dash3.png"
+dest_files=["res://.godot/imported/dash3.png-f0bdb1cd3535d81b326da796887fed88.ctex"]
 
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
-compress/hdr_mode=0
-compress/bptc_ldr=0
+compress/hdr_compression=1
 compress/normal_map=0
-flags/repeat=0
-flags/filter=false
-flags/mipmaps=false
-flags/anisotropic=false
-flags/srgb=2
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
-process/HDR_as_SRGB=false
-process/invert_color=false
 process/normal_map_invert_y=false
-stream=false
-size_limit=0
-detect_3d=true
-svg/scale=1.0
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

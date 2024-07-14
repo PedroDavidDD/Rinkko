@@ -2,14 +2,18 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/Fire.mp3-6b8ffade6a9be2b3359ee7691a16e4cd.mp3str"
+uid="uid://yeq70m7wpb2a"
+path="res://.godot/imported/Fire.mp3-ab1aaee37e2bfd437e4a1aa5c9bc0a8d.mp3str"
 
 [deps]
 
-source_file="res://Assets/Audio/Fire.mp3"
-dest_files=[ "res://.import/Fire.mp3-6b8ffade6a9be2b3359ee7691a16e4cd.mp3str" ]
+source_file="res://Rinkko/Assets/Audio/Fire.mp3"
+dest_files=["res://.godot/imported/Fire.mp3-ab1aaee37e2bfd437e4a1aa5c9bc0a8d.mp3str"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

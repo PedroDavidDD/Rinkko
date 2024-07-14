@@ -1,35 +1,34 @@
 [remap]
 
 importer="texture"
-type="StreamTexture"
-path="res://.import/FX_darktolight31.png-055a8db9c6eb1ce66adca66ef9ac0ede.stex"
+type="CompressedTexture2D"
+uid="uid://bybib4cahjwaw"
+path="res://.godot/imported/FX_darktolight31.png-507c84ed58c8165c66d9eb1444dcf26d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player/Dark/FX_darktolight/FX_darktolight31.png"
-dest_files=[ "res://.import/FX_darktolight31.png-055a8db9c6eb1ce66adca66ef9ac0ede.stex" ]
+source_file="res://Rinkko/Assets/Sprites/People/Player/Dark/FX_darktolight/FX_darktolight31.png"
+dest_files=["res://.godot/imported/FX_darktolight31.png-507c84ed58c8165c66d9eb1444dcf26d.ctex"]
 
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
-compress/hdr_mode=0
-compress/bptc_ldr=0
+compress/hdr_compression=1
 compress/normal_map=0
-flags/repeat=0
-flags/filter=true
-flags/mipmaps=false
-flags/anisotropic=false
-flags/srgb=2
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
-process/HDR_as_SRGB=false
-process/invert_color=false
 process/normal_map_invert_y=false
-stream=false
-size_limit=0
-detect_3d=true
-svg/scale=1.0
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

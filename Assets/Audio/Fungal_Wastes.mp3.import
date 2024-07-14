@@ -2,14 +2,18 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/Fungal_Wastes.mp3-5fecd5607d1bf292f6738907d0894d9a.mp3str"
+uid="uid://chpv5qcmvpb4r"
+path="res://.godot/imported/Fungal_Wastes.mp3-d0ddb683ccd750b2f5a0feb034c4d917.mp3str"
 
 [deps]
 
-source_file="res://Assets/Audio/Fungal_Wastes.mp3"
-dest_files=[ "res://.import/Fungal_Wastes.mp3-5fecd5607d1bf292f6738907d0894d9a.mp3str" ]
+source_file="res://Rinkko/Assets/Audio/Fungal_Wastes.mp3"
+dest_files=["res://.godot/imported/Fungal_Wastes.mp3-d0ddb683ccd750b2f5a0feb034c4d917.mp3str"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

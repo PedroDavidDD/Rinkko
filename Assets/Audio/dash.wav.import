@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/dash.wav-79d435e2f1f846d64983bf08dc1e5e67.sample"
+type="AudioStreamWAV"
+uid="uid://bjk803hyygx1j"
+path="res://.godot/imported/dash.wav-d046b9e28c20bedd81b22438ca36a102.sample"
 
 [deps]
 
-source_file="res://Assets/Audio/dash.wav"
-dest_files=[ "res://.import/dash.wav-79d435e2f1f846d64983bf08dc1e5e67.sample" ]
+source_file="res://Rinkko/Assets/Audio/dash.wav"
+dest_files=["res://.godot/imported/dash.wav-d046b9e28c20bedd81b22438ca36a102.sample"]
 
 [params]
 
