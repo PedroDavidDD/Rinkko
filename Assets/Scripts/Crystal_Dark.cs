@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Crystal_Dark : MonoBehaviour
 {
+    [SerializeField] private AudioClip sonidoRecoleccion;
     [SerializeField]
     private int puntosCrystal = 3;
 
@@ -14,6 +15,12 @@ public class Crystal_Dark : MonoBehaviour
     {
         if (other.CompareTag("Player") && controllerScore != null)
         {
+
+            if (sonidoRecoleccion != null)
+            {
+                AudioSource.PlayClipAtPoint(sonidoRecoleccion, transform.position);
+            }
+
             controllerScore.ObtenerCrystal(puntosCrystal);
             Destroy(gameObject);
         }

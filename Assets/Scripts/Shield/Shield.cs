@@ -11,6 +11,42 @@ public class Shield : MonoBehaviour
     [Tooltip("cantidad de daño")]
     public int damageAmount = 20;
 
+    [Header("Variables de sonido")]
+    [SerializeField] private AudioClip sonidoEscudo;
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        // 1. Intentamos obtener el componente
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+        // 2. Configuramos y reproducimos
+        if (sonidoEscudo != null)
+        {
+            audioSource.clip = sonidoEscudo;
+            audioSource.loop = true; // Hace que el sonido nunca termine
+            audioSource.Play();
+        }
+        else
+        {
+            Debug.LogWarning("Falta asignar el AudioClip de 'Sonido Escudo' en el Inspector.");
+        }
+    }
+
+    private void OnDisable()
+    {
+        // OnDisable se ejecuta justo cuando el objeto se destruye o se desactiva.
+        // Aquí cortamos el sonido inmediatamente.
+        if (audioSource != null && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Verificar si el objeto es un enemigo y hay etiquetas para repeler

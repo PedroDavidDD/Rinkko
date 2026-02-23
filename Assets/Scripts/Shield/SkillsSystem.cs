@@ -1,46 +1,110 @@
+using System.Collections;
 using UnityEngine;
 
 public class SkillsSystem : MonoBehaviour
 {
-    public GameObject shieldPrefab; // Prefab del escudo
-    public float shieldDuration = 3f; // Duración del escudo en segundos
-    public float shieldHeight = .5f; // Altura del escudo
-    public float shieldWidth = .5f; // Ancho del escudo
-    public Transform shieldPositionObject; // Objeto que proporciona la posición del escudo
+    [Header("Escudo")]
+    public GameObject shieldPrefab;
+    public float shieldDuration = 3f;
+    public float shieldHeight = .5f;
+    public float shieldWidth = .5f;
+    public Transform shieldPositionObject;
 
-    private bool isShieldActive = false; // Estado del escudo
-    private GameObject shieldInstance; // Instancia del escudo
+    private bool isShieldActive = false;
+    private bool shieldOnCooldown = false;
+    private GameObject shieldInstance;
 
-    // Update is called once per frame
     void Update()
     {
-        // Si se presiona la tecla "p" y el escudo no está activo, se crea el escudo
-        if (Input.GetKeyDown(KeyCode.P) && !isShieldActive)
+        HandleShieldInput();
+    }
+
+    /// <summary>
+    /// Detecta si el jugador presiona la tecla P
+    /// y verifica si el escudo puede activarse.
+    /// </summary>
+    private void HandleShieldInput()
+    {
+        if (Input.GetKeyDown(KeyCode.P) && !shieldOnCooldown)
         {
-            CreateShield();
-            isShieldActive = false;
+            StartCoroutine(ShieldLifecycle());
         }
     }
 
-    void CreateShield()
+    /// <summary>
+    /// Controla todo el ciclo de vida del escudo:
+    /// activar -> esperar duración -> destruir -> resetear estado.
+    /// </summary>
+    private IEnumerator ShieldLifecycle()
     {
-        // Activar el escudo
+        ActivateShieldState();
+        SpawnShield();
+
+        yield return WaitShieldDuration();
+
+        DestroyShield();
+        ResetShieldState();
+    }
+
+    /// <summary>
+    /// Activa el estado del escudo y bloquea el input (cooldown).
+    /// </summary>
+    private void ActivateShieldState()
+    {
         isShieldActive = true;
+        shieldOnCooldown = true;
+    }
 
-        // Verificar si se ha asignado un objeto para la posición del escudo
-        if (shieldPositionObject != null)
-        {
-            // Obtener la posición del escudo a partir del objeto asignado
-            Vector3 shieldPosition = shieldPositionObject.position;
+    /// <summary>
+    /// Instancia el escudo en la posición indicada
+    /// y configura su tamaño.
+    /// </summary>
+    private void SpawnShield()
+    {
+        if (shieldPositionObject == null) return;
 
-            // Crear la instancia del escudo en la posición y rotación proporcionadas
-            shieldInstance = Instantiate(shieldPrefab, shieldPosition, Quaternion.identity);
-        }
+        Vector3 shieldPosition = shieldPositionObject.position;
 
-        // Establecer el tamaño del escudo
+        shieldInstance = Instantiate(shieldPrefab, shieldPosition, Quaternion.identity);
+
+        ConfigureShieldScale();
+    }
+
+    /// <summary>
+    /// Ajusta la escala del escudo según los valores configurados.
+    /// </summary>
+    private void ConfigureShieldScale()
+    {
+        if (shieldInstance == null) return;
+
         shieldInstance.transform.localScale = new Vector3(shieldWidth, shieldHeight, 1f);
+    }
 
-        // Establecer la duración del escudo
-        Destroy(shieldInstance, shieldDuration);
+    /// <summary>
+    /// Espera el tiempo configurado de duración del escudo.
+    /// </summary>
+    private WaitForSeconds WaitShieldDuration()
+    {
+        return new WaitForSeconds(shieldDuration);
+    }
+
+    /// <summary>
+    /// Destruye la instancia del escudo si existe.
+    /// </summary>
+    private void DestroyShield()
+    {
+        if (shieldInstance != null)
+        {
+            Destroy(shieldInstance);
+        }
+    }
+
+    /// <summary>
+    /// Restaura el estado para permitir volver a usar el escudo.
+    /// </summary>
+    private void ResetShieldState()
+    {
+        isShieldActive = false;
+        shieldOnCooldown = false;
     }
 }

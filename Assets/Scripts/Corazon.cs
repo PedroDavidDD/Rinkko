@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Corazon : MonoBehaviour
 {
+    [SerializeField] private AudioClip sonidoRecoleccion;
     [SerializeField]
     private int puntosCorazon = 1;
 
@@ -13,6 +14,12 @@ public class Corazon : MonoBehaviour
     {
         if (other.CompareTag("Player") && controllerScore != null)
         {
+
+            if (sonidoRecoleccion != null)
+            {
+                AudioSource.PlayClipAtPoint(sonidoRecoleccion, transform.position);
+            }
+
             controllerScore.ObtenerCorazon(puntosCorazon);
             Destroy(gameObject);
         }

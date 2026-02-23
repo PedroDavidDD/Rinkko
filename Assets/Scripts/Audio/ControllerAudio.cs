@@ -15,13 +15,17 @@ public class ControllerAudio : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }else{
             Destroy(gameObject);
+            return;
         }
         audioSource = GetComponent<AudioSource>();
     }
 
     public void ExecuteSound(AudioClip sound)
     {
-        audioSource.PlayOneShot(sound);
+        if (sound != null)
+        {
+            audioSource.PlayOneShot(sound);
+        }
     }
     public void IsSound(AudioClip sound)
     {

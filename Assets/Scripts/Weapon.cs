@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-	public GameObject bulletPrefab;
+    [SerializeField] private AudioClip sonidoRecoleccion;
+    public GameObject bulletPrefab;
 	public GameObject shooter;
 
 	private Transform _firePoint;
@@ -33,7 +34,7 @@ public class Weapon : MonoBehaviour
 
 	void Shoot()
 	{
-		if (bulletPrefab != null && _firePoint != null) {
+		if (bulletPrefab != null && _firePoint != null && sonidoRecoleccion != null) {
 			GameObject myBullet = Instantiate(bulletPrefab, _firePoint.position, Quaternion.identity) as GameObject;
 
 			Bullet bulletComponent = myBullet.GetComponent<Bullet>();
@@ -45,6 +46,8 @@ public class Weapon : MonoBehaviour
 				//Right
 				bulletComponent.direction = Vector2.right; // new Vector2(1f, 0f)
 			}
-		}
+
+            AudioSource.PlayClipAtPoint(sonidoRecoleccion, transform.position);
+        }
 	}
 }
